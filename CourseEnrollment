@@ -1,0 +1,35 @@
+import { useState } from "react";
+
+export default function CourseEnrollment() {
+  const [course, setCourse] = useState("");
+  const [list, setList] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setList([...list, course]);
+    setCourse("");
+  };
+
+  return (
+    <>
+      <h1>Course Enrollment</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={course}
+          placeholder="Enter course"
+          onChange={(e) => setCourse(e.target.value)}
+        />
+        <br /><br />
+        <button type="submit">Enroll</button>
+      </form>
+
+      <ul>
+        {list.map((c, index) => (
+          <li key={index}>{c}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
