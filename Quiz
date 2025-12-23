@@ -1,0 +1,32 @@
+import { useState } from "react";
+
+export default function Quiz() {
+  const [score, setScore] = useState(0);
+
+  const handleAnswer = (correct) => {
+    if (correct) {
+      setScore(score + 1);
+    }
+  };
+
+  return (
+    <>
+      <h1>Mini Quiz</h1>
+      <p>Score: {score}</p>
+
+      <p>Capital of France?</p>
+      <button onClick={() => handleAnswer(false)}>Berlin</button>
+      <button onClick={() => handleAnswer(true)}>Paris</button>
+    </>
+  );
+}
+
+
+App.jsx
+import Quiz from "./form/Quiz";
+
+function App() {
+  return <Quiz />;
+}
+
+export default App;
