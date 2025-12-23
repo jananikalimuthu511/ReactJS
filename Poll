@@ -1,0 +1,19 @@
+import { useState } from "react";
+
+export default function Poll() {
+  const [js, setJs] = useState(0);
+  const [py, setPy] = useState(0);
+
+  return (
+    <>
+      <h1>Classroom Poll</h1>
+
+      <button onClick={() => setJs(js + 1)}>JavaScript</button>
+      <button onClick={() => setPy(py + 1)}>Python</button>
+
+      <h3>Results</h3>
+      <p>JavaScript: {js}</p>
+      <p>Python: {py}</p>
+    </>
+  );
+}
