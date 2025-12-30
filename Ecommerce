@@ -1,0 +1,10 @@
+export default function Ecommerce() {
+  return (
+    <>
+      <h1>Product</h1>
+      <button onClick={() => alert("Added to Cart")}>
+        Add to Cart
+      </button>
+    </>
+  );
+}
