@@ -1,0 +1,23 @@
+import { useState } from "react";
+
+export default function Attendance() {
+  const [status, setStatus] = useState("Absent");
+
+  return (
+    <>
+      <h1>Attendance Tracker</h1>
+      <button onClick={() => setStatus("Present")}>Present</button>
+      <button onClick={() => setStatus("Absent")}>Absent</button>
+      <h3>Status: {status}</h3>
+    </>
+  );
+}
+
+App.jsx
+import Attendance from "./FSWD/CoreConcepts/Attendance";
+
+function App() {
+  return <Attendance />;
+}
+
+export default App;
