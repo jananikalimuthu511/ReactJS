@@ -1,0 +1,13 @@
+export default function HotelReservation() {
+  const reserveHotel = () => {
+    const days = prompt("Enter number of days");
+    alert(`Hotel reserved for ${days} days`);
+  };
+
+  return (
+    <>
+      <h1>Hotel Reservation</h1>
+      <button onClick={reserveHotel}>Reserve</button>
+    </>
+  );
+}
