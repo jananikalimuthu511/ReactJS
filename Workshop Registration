@@ -1,0 +1,16 @@
+import { useState } from "react";
+
+export default function Workshop() {
+  const [name, setName] = useState("");
+
+  return (
+    <>
+      <h1>Workshop Registration</h1>
+      <input
+        placeholder="Enter Name"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <p>Live Preview: {name}</p>
+    </>
+  );
+}
