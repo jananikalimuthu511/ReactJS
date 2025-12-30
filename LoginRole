@@ -1,0 +1,13 @@
+export default function LoginRole() {
+  const login = () => {
+    const role = prompt("Enter role (admin/user)");
+    alert(`Welcome ${role}`);
+  };
+
+  return (
+    <>
+      <h1>Login</h1>
+      <button onClick={login}>Login</button>
+    </>
+  );
+}
