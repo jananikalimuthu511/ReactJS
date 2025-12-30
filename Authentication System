@@ -1,0 +1,12 @@
+export default function Auth() {
+  const authenticate = () => {
+    alert("Invalid Username or Password");
+  };
+
+  return (
+    <>
+      <h1>Authentication</h1>
+      <button onClick={authenticate}>Login</button>
+    </>
+  );
+}
