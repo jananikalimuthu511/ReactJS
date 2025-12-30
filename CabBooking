@@ -1,0 +1,13 @@
+export default function CabBooking() {
+  const bookCab = () => {
+    const place = prompt("Pickup location");
+    alert(`Cab booked from ${place}`);
+  };
+
+  return (
+    <>
+      <h1>Cab Booking</h1>
+      <button onClick={bookCab}>Book Cab</button>
+    </>
+  );
+}
