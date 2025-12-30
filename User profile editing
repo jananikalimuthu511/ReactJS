@@ -1,0 +1,17 @@
+export default function ProfileEdit() {
+  const saveProfile = (e) => {
+    e.preventDefault();
+    alert("Profile Updated");
+  };
+
+  return (
+    <>
+      <h1>Edit Profile</h1>
+      <form onSubmit={saveProfile}>
+        <input placeholder="Username" required />
+        <br /><br />
+        <button type="submit">Save</button>
+      </form>
+    </>
+  );
+}
