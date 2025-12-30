@@ -1,0 +1,14 @@
+export default function Feedback() {
+  const submitFeedback = () => alert("Feedback Submitted");
+
+  return (
+    <>
+      <h1>Feedback</h1>
+      <input placeholder="Rating" />
+      <br /><br />
+      <textarea placeholder="Comments"></textarea>
+      <br /><br />
+      <button onClick={submitFeedback}>Submit</button>
+    </>
+  );
+}
